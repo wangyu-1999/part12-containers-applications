@@ -1,0 +1,14 @@
+Script started on Sun Jul  6 11:49:35 2025
+[1m[7m%[27m[1m[0m                                                                                ]7;file://wangyudeMacBook-Air.local/Users/wangyu/Desktop[0m[27m[24m[J(base) wangyu@wangyudeMacBook-Air Desktop % [K[?2004hddockr er run -it ubuntu bash[?2004l
+[?2004h]0;root@8973d20ca588: /root@8973d20ca588:/# mkdir -p us  /usr/src/app
+[?2004l[?2004h]0;root@8973d20ca588: /root@8973d20ca588:/# touck h /usr/src/app/index.js
+[?2004l[?2004h]0;root@8973d20ca588: /root@8973d20ca588:/# [Kexit
+[?2004lexit
+[1m[7m%[27m[1m[0m                                                                                ]7;file://wangyudeMacBook-Air.local/Users/wangyu/Desktop[0m[27m[24m[J(base) wangyu@wangyudeMacBook-Air Desktop % [K[?2004heexit[?2004l
+
+Saving session...
+...copying shared history...
+...saving history...truncating history files...
+...completed.
+
+Script done on Sun Jul  6 11:51:19 2025
