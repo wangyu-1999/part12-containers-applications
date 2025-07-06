@@ -1,0 +1,82 @@
+Script started on Sun Jul  6 20:30:36 2025
+[1m[7m%[27m[1m[0m                                                                                                                [0m[27m[24m[J(base) wangyu@wangyudeMacBook-Air todo-backend % [K[?2004hddocker ps[?2004l
+CONTAINER ID   IMAGE     COMMAND                   CREATED          STATUS          PORTS                     NAMES
+aaa4257baaa5   mongo     "docker-entrypoint.s…"   27 minutes ago   Up 27 minutes   0.0.0.0:3456->27017/tcp   todo-backend-mongo-1
+[1m[7m%[27m[1m[0m                                                                                                                [0m[27m[24m[J(base) wangyu@wangyudeMacBook-Air todo-backend % [K[?2004hs ddocker exec -it aaa bash[?2004l
+[?2004hroot@aaa4257baaa5:/# mongosh -u root -p ea xample
+[?2004l]0;mongosh mongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000Current Mongosh Log ID:	686ab34ef930a2b65af4706f
+Connecting to:		[1m[32mmongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.5.3[0m
+Using MongoDB:		8.0.11
+[1m[33mUsing Mongosh[0m:		2.5.3
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+
+To help improve our products, anonymous usage data is collected and sent to MongoDB periodically (https://www.mongodb.com/legal/privacy-policy).
+You can opt-out by running the disableTelemetry() command.
+
+[1G[0J [1G[?2004h[1m[33m------[0m
+   [1m[33mThe server generated these startup warnings when booting[0m
+   2025-07-06T17:03:35.598+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+   2025-07-06T17:03:36.656+00:00: For customers running the current memory allocator, we suggest changing the contents of the following sysfsFile
+   2025-07-06T17:03:36.656+00:00: We suggest setting the contents of sysfsFile to 0.
+   2025-07-06T17:03:36.656+00:00: vm.max_map_count is too low
+   2025-07-06T17:03:36.656+00:00: We suggest setting swappiness to 0 or 1, as swapping can cause performance problems.
+[1m[33m------[0m
+
+[1G[0Jtest> [7Gshow dbs
+[1madmin[0m         100.00 KiB
+[1mconfig[0m        108.00 KiB
+[1mlocal[0m          72.00 KiB
+[1mthe_database[0m   40.00 KiB
+[1G[0Jtest> [7Guse the_database
+switched to db the_database
+[1G[0Jthe_database> [15Gshow cloo[1G[0Jthe_database> show clo[23G[1G[0Jthe_database> show cl[22G[1G[0Jthe_database> show c[21Gollections
+[1mtodos[0m
+[1G[0Jthe_database> [15Gdb.todos.find({})
+[
+  {
+    _id: ObjectId([32m'686aac66c539020ecbf47070'[39m),
+    text: [32m'Write code'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId([32m'686aac66c539020ecbf47071'[39m),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  }
+]
+[1G[0Jthe_database> [15Gd[36mdo[39m[1G[0Jthe_database> d[16Gb.todos.insert({text[33mtext[39m: [32m"[39m[32mI[39m[32mn[39m[32mc[39m[32mr[39m[32me[39m[32ma[39m[32ms[39m[32me[39m [32mt[39m[32mh[39m[32me[39m [32mn[39m[32mu[39m[32mm[39m[32mb[39m[32me[39m[32mr[39m [32mo[39m[32mf[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m[32ms[39m [32mi[39m[32mn[39m [32mm[39m[32my[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m [32mb[39m[32me[39m[32ml[39m[32mt[39m[32m"[39m ,d[36mdo[39mdone:fals[33mfalse[39m})
+DeprecationWarning: Collection.insert() is deprecated. Use insertOne, insertMany, or bulkWrite.
+{
+  acknowledged: [33mtrue[39m,
+  insertedIds: { [32m'0'[39m: ObjectId([32m'686ab415f930a2b65af47070'[39m) }
+}
+[1G[0Jthe_database> [15Gdb.todos.find({})
+[
+  {
+    _id: ObjectId([32m'686aac66c539020ecbf47070'[39m),
+    text: [32m'Write code'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId([32m'686aac66c539020ecbf47071'[39m),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  },
+  {
+    _id: ObjectId([32m'686ab415f930a2b65af47070'[39m),
+    text: [32m'Increase the number of tools in my tool belt'[39m,
+    done: [33mfalse[39m
+  }
+]
+[1G[0Jthe_database> [15Gexit
+[?2004l[?2004hroot@aaa4257baaa5:/# ext it
+[?2004lexit
+[1m
+What's next:[0m
+    Try Docker Debug for seamless, persistent debugging tools in any container or image → [36mdocker debug aaa[0m
+    Learn more at https://docs.docker.com/go/debug-cli/
+[1m[7m%[27m[1m[0m                                                                                                                [0m[27m[24m[J(base) wangyu@wangyudeMacBook-Air todo-backend % [K[?2004heexit[?2004l
+
+Script done on Sun Jul  6 20:37:24 2025
