@@ -12,3 +12,6 @@ services:
     environment:
       - VITE_BACKEND_URL=http://localhost:3000
     container_name: todo-frontend-dev # This will name the container hello-front-dev
+
+  debug-helper:    
+    image: busybox # docker compose  -f docker-compose.dev.yml run debug-helper wget -O - http://app:5173
