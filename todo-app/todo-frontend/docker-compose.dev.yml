@@ -13,5 +13,15 @@ services:
       - VITE_BACKEND_URL=http://localhost:3000
     container_name: todo-frontend-dev # This will name the container hello-front-dev
 
+  nginx:
+    image: nginx:1.20.1
+    volumes:
+      - ./nginx.dev.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - 8080:80
+    container_name: reverse-proxy
+    depends_on:
+      - app # wait for the frontend container to be started
+
   debug-helper:    
     image: busybox # docker compose  -f docker-compose.dev.yml run debug-helper wget -O - http://app:5173
